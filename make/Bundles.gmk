@@ -278,7 +278,7 @@ ifneq ($(filter product-bundles% legacy-bundles, $(MAKECMDGOALS)), )
       $(SYMBOLS_EXCLUDE_PATTERN), \
       $(ALL_JRE_FILES))
 
-  ifeq ($(MACOSX_CODESIGN_MODE), hardened)
+  ifeq ($(SIGN_BUNDLE), true)
     # Macosx release build and code signing available.
 
     ################################################################################
